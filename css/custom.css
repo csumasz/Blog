@@ -58,3 +58,17 @@ img{
 .readmore:hover{
     background: #ccc;
 }
+
+.blog-sidebar{
+    margin-top: 50px;
+}
+
+.blog-footer{
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+footer p{
+    margin-bottom: 5px;
+}
