@@ -1,3 +1,7 @@
+<?php include ('config/config.php');?>
+<?php include ('libraries/database.php');?>
+<?php include ('helpers/format_helper.php');?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>

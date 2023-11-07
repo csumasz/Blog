@@ -4,5 +4,5 @@
     define('DB_PASS', '');
     define('DB_NAME', 'blog');
 
-    
+    $site_description = "Curabitur a quam <em>pellentesque</em> lacus vehicula fermentum. Nulla convallis lobortis placerat.";
 ?>
