@@ -1,9 +1,25 @@
 <?php include ('includes/header.php');?>
+<?php
+    $id = $_GET['id'];
 
+    $db = new Database();
+
+    //Create query
+    $query = "SELECT * FROM category WHERE id = ".$id;
+
+    //run query
+    $category = $db->select($query)->fetch_assoc();
+
+     //Create query
+     $query = "SELECT * FROM category";
+
+     //run query
+     $categories = $db->select($query);
+?>
 <form method="post" action="edit_category.php">
     <div class="form-group">
         <label class="form-label">Category Name</label>
-        <input type="email" name="name" class="form-control" placeholder="Enter Category">
+        <input type="email" name="name" class="form-control" placeholder="Enter Category" value="<?php echo $category['name']; ?>">
     </div>
     <div>
         <input type="submit" name="submit" class="btn btn-secondary" value="Submit">
