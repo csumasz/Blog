@@ -64,11 +64,30 @@ img{
 }
 
 .blog-footer{
-    width: 80%;
+    width: 100%;
+    min-height: 150px;
+    margin-top: 20px;
     text-align: center;
-    margin: 20px auto;
+    padding: 50px;
 }
 
 footer p{
     margin-bottom: 5px;
+}
+
+footer{
+    background: #f3f3f3;
+}
+
+.pull-right{
+   float: right;
+}
+
+.form-group{
+    margin: 1rem auto;
+}
+
+.form-label{
+    margin-bottom: 5px;
+    font-weight: 600;
 }
