@@ -3,13 +3,13 @@
     $db = new Database();
 
     //Create query
-    $query = "SELECT * FROM posts";
+    $query = "SELECT * FROM posts ORDER BY id DESC";
 
     //run query
     $posts = $db->select($query);
 
      //Create query
-     $query = "SELECT * FROM category";
+     $query = "SELECT * FROM category ORDER BY id DESC";
 
      //run query
      $categories = $db->select($query);

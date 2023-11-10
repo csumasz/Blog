@@ -16,10 +16,34 @@
      //run query
      $categories = $db->select($query);
 ?>
-<form method="post" action="edit_category.php">
+<?php
+    if(isset($_POST['submit'])){
+        $name = mysqli_real_escape_string($db->link, $_POST['name']);
+       
+        
+        if($name == '' ){
+            echo $error = 'Please fill out all fields!';
+
+        }else{
+            $query = "UPDATE category 
+                    SET 
+                    name = '$name'
+                    WHERE id = ".$id;
+           
+           $update_row = $db->update($query);
+        }
+    }
+?>
+<?php
+    if(isset($_POST['delete'])){
+        $query = "DELETE FROM category WHERE id = ".$id;
+        $delete_row = $db->delete($query);
+    }
+?>
+<form method="post" action="edit_category.php?id=<?php echo $id;?>">
     <div class="form-group">
         <label class="form-label">Category Name</label>
-        <input type="email" name="name" class="form-control" placeholder="Enter Category" value="<?php echo $category['name']; ?>">
+        <input type="text" name="name" class="form-control" placeholder="Enter Category" value="<?php echo $category['name']; ?>">
     </div>
     <div>
         <input type="submit" name="submit" class="btn btn-secondary" value="Submit">
