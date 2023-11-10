@@ -23,7 +23,7 @@
         <a class="blog-nav-item active" href="index.php">Dashboard</a>
         <a class="blog-nav-item" href="add_post.php">Add post</a>
         <a class="blog-nav-item" href="add_category.php">Category</a>
-        <a class="blog-nav-item pull-right" href="Http:://localhost/phpLoversBlog">Visit Blog</a>
+        <a class="blog-nav-item pull-right" href="Http://localhost/projects/phpLoversBlog">Visit Blog</a>
         </nav>
     </div>
     </div>
@@ -35,3 +35,9 @@
         <div class="clear"></div>
         <div class="row ">
             <div class="col-sm-12 blog-main">
+              <?php if(isset($_GET['msg'])) : ?>
+                <div class="alert alert-success">
+                  <?php echo htmlentities($_GET['msg']); ?>
+                </div>
+              <?php endif;?>
+              

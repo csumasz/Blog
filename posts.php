@@ -6,13 +6,14 @@
     if(isset($_GET['category'])){
         $category = $_GET['category'];
         //Create query
-        $query = "SELECT * FROM posts WHERE category = ". $category;
+        $query = "SELECT * FROM posts WHERE category = "
+                .$category. " ORDER BY id DESC" ;
 
         //run query
         $posts = $db->select($query);
     }else{
         //Create query
-        $query = "SELECT * FROM posts";
+        $query = "SELECT * FROM posts ORDER BY id DESC";
 
         //run query
         $posts = $db->select($query);
